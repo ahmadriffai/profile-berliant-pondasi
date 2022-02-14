@@ -5,7 +5,8 @@
 /* Variable */
 
 :root{
-    --main-color: #0F3331;    ;
+    --main-color: #0F3331; 
+    --second-color: #DEE5E1;   ;
     --red: #e91369;
     --yellow: #f5ae10;
     --green: #09d69c;
@@ -30,8 +31,9 @@ body{
     font-weight: 400;
     overflow-x: hidden;
     background-color: #EFEFED;
-    ;
 }
+
+
 
 *{
     margin: 0;
@@ -89,6 +91,22 @@ ul{
     left: 1%;
 }
 
+.btn-1{
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 5px 20px;
+    transition: all 0.5s ease;
+}
+
+.btn-1:hover{
+    background-color: var(--white);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* global end */
+
+
 /* Bootstap custom */
 
 .carousel{
@@ -123,7 +141,12 @@ ul{
 .navbar{
     background-color: var(--white);
     color: var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.navbar.navbar-shrink{
     box-shadow: var(--shadow-black-100);
+    padding: 10px 0;
 }
 
 .navbar > .container{
@@ -170,7 +193,7 @@ ul{
 
 /* .home{
     position: relative;
-    top: -90px;
+    top: -80px;
     z-index: -1;
 } */
 
@@ -208,4 +231,166 @@ ul{
 .section2 .section2-img img{
     margin: 20px auto;
     width:200px;
+}
+
+/* Section 3 */
+
+.section3{
+    background-color: var(--second-color);
+}
+
+.section3 .section3-item{
+    margin: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.section3 .card{
+    width: 300px;
+    margin: 20px 0;
+    box-shadow: var(--shadow-black-100);
+}
+
+.section3 .card .card-img{
+    overflow: hidden;
+}
+
+.section3 .card .card-img img{
+    transform: scale(1);
+    transition: all 0.5s ease;   
+}
+
+.section3 .card .card-img img:hover{
+    transform: scale(1.5);   
+}
+
+/* -----------------------------
+section 4
+------------------------------ */
+.section4-item{
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+.section4-item.line-right::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 50%;
+    top: 59px;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+.section4-item .step{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: var(--main-color);
+    font-synthesis: 30px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    color: var(--white);
+}
+
+.section4-item h3{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black-900);
+}
+
+.section4-item p{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    color: var(--black-400);
+}
+
+/* -------------
+footre
+---------------- */
+.footer{
+    background-color: var(--main-color);
+    padding: 50px 0 0;
+}
+
+.footer-col h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0 0 25px;
+    text-transform: capitalize;
+}
+.footer-col ul{
+    color: var(--white);
+    margin: 0;
+}
+
+.footer-col ul li{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    display: block;
+    transition: all 0.5s ease;
+    text-decoration: none
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer ul li a{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    display: block;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.footer ul li a:hover{
+    padding-left: 5px;
+}
+
+.footer .copyright-text{
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+/* --------------------
+galery
+----------------------- */
+.gallery{
+    padding: 80px 0;
+}
+
+.gallery .gallery-img{
+    overflow: hidden;
+    max-height: 300px;
+}
+
+/* ------------------
+Responsive 
+--------------------*/
+
+@media(max-width: 991px) {
+    .section4-item.line-right::before{
+        content: none;
+    }
+    
+    .section4-item{
+        box-shadow: var(--shadow-black-100);
+        border-radius: 10px;
+        margin: 10px 0;
+    }
 }
